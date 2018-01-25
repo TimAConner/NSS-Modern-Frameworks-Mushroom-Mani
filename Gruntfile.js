@@ -2,12 +2,12 @@ module.exports = function(grunt){
     
     grunt.initConfig({
         browserify: {
-            'dist/bundle.js': ['js/main.js']
+            'dist/app.js': ['js/app.js']
         },
         jshint: {
             files: ['js/**/*.js'],
             options: {
-                predef: ["document", "console", "EventSource"],//Ignore these even though we haven't defined them
+                predef: ["document", "console"],//Ignore these even though we haven't defined them
                 esnext: true, //Telling to use latest version of javascript
                 globalstrict: true,
                 globals: {},
