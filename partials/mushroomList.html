@@ -1,0 +1,17 @@
+<div>
+    
+    <label for="pois">Poisonous</label>
+    <input type="radio" id="pois" ng-model="pois">
+    
+    <label for="non-pois">Non-Poisonous</label>
+    <input type="radio" id="non-pois" ng-model="nonPois">
+
+    <label for="search">Search:</label>
+    <input type="text" id="search" ng-model="searchTerm">
+    
+    <ul ng-repeat="mushroom in mushroomList">
+        <li>
+            {{mushroom}}
+        </li>
+    </ul>
+</div>
