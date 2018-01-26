@@ -12,9 +12,9 @@
     <label for="search">Search:</label>
     <input type="text" id="search" ng-model="searchTerm">
     
-    <ul ng-repeat="mushroom in mushroomList | filter: searchTerm">
+    <ul ng-repeat="mushroom in mushroomList | filter: {edible: !pois} | filter: searchTerm">
         <!-- <li > -->
-            <li ng-show="mushroom.edible !== pois">
+            <li>
                 <!-- Capitalie first letter of mushroom name -->
                 <h3>{{mushroom.name.charAt(0).toUpperCase() + mushroom.name.slice(1)}}</h3>
                 <p>{{mushroom.description}}</p>
