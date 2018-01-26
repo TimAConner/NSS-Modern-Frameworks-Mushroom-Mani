@@ -1,12 +1,10 @@
 <div>
-    <label for="">Poisonous</label>
-    <input type="checkbox" ng-model="pois">
+    <label for="pois">Poisonous</label>
+    <input type="radio" id="pois" name="pois" ng-value="true" ng-model="pois">
     
-    <!-- <label for="non-pois">Non-Poisonous</label>
-    <input type="radio" id="non-pois" name="pois" ng-model="pois"> -->
-
-    {{pois}}
-
+    <label for="non-pois">Non-Poisonous</label>
+    <input type="radio" id="non-pois" name="pois" ng-value="false" ng-model="pois">
+    
     <label for="search">Search:</label>
     <input type="text" id="search" ng-model="searchTerm">
     
